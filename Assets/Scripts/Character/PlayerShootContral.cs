@@ -41,6 +41,14 @@ public class PlayerShootContral : CharacterBase, IRemake
         base.Start();
     }
 
+    private void FixedUpdate()
+    {
+        if (GameManager.Instance.State != BattleState.PLAYERTURN || UseBool)
+            return;
+
+        LineUpdate();
+    }
+
     public override void Update()
     {
         if (GameManager.Instance.State != BattleState.PLAYERTURN || UseBool)
@@ -64,8 +72,6 @@ public class PlayerShootContral : CharacterBase, IRemake
 
             mouseDir = NewDir.normalized;
         }
-
-        LineUpdate();
 
         if (Input.GetMouseButtonUp(0) && Ispress)
         {

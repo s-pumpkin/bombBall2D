@@ -25,7 +25,7 @@ public class BallContral : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         AvoidStopSpeed();
 
@@ -41,7 +41,7 @@ public class BallContral : MonoBehaviour
             lastVelocity = rig2D.velocity;
         else
             rig2D.velocity = -lastVelocity;
-        //rig2D.velocity = lastVelocity;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -71,9 +71,13 @@ public class BallContral : MonoBehaviour
 
     private void AvoidHorizontalReflection(ref Vector2 v2)
     {
-        float Sign = Mathf.Sign(v2.y);
+        float SignY = Mathf.Sign(v2.y);
         if (Mathf.Abs(v2.y) <= 1f)
-            v2.y = Sign * 1f;
+            v2.y = SignY * 1f;
+
+        float SignX = Mathf.Sign(v2.x);
+        if (Mathf.Abs(v2.x) <= .5f)
+            v2.x = SignX * .5f;
     }
 
     private void OnEnable()

@@ -18,7 +18,12 @@ public class DeathArea : MonoBehaviour, IRemake
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BallContral ballCtr = BallPool.GetValue(collision.gameObject);
+        BallRecoery(collision);
+    }
+
+    void BallRecoery(Collider2D col)
+    {
+        BallContral ballCtr = BallPool.GetValue(col.gameObject);
         if (ballCtr == null)
         {
             Debug.LogError("名稱: " + ballCtr.name + "ID: " + ballCtr.ID + " 此球未註冊");
@@ -31,7 +36,7 @@ public class DeathArea : MonoBehaviour, IRemake
         if (!FristCol)
         {
             FristCol = true;
-            PlayerShootContral.Instance.OnChangePosition(collision.gameObject.transform.position);
+            PlayerShootContral.Instance.OnChangePosition(col.gameObject.transform.position);
         }
 
         BallPool.Recovery(ballCtr);
