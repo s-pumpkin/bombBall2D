@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public enum BattleState { UI, START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -49,8 +50,8 @@ public class GameManager : MonoBehaviour
 
     public List<IRemake> IRemakeList = new List<IRemake>();
 
-    public GameObject DefulBall;
-    public GameObject DefulEnemy;
+    public AssetReference DefulBall;
+    public AssetReference DefulEnemy;
     public GameObject m_BallPool;
     public GameObject m_EnemyPool;
 
@@ -163,7 +164,7 @@ public class GameManager : MonoBehaviour
         return v2;
     }
 
-    public void SummonEnemy(GameObject enemy)
+    public void SummonEnemy(AssetReference enemy)
     {
         List<Vector2> CurrEnemyPositionList = new List<Vector2>();
         foreach (EnemyContral ec in EnemyPool.EnemyContralDictionary.Values)
@@ -180,7 +181,7 @@ public class GameManager : MonoBehaviour
                 return;
 
             Vector2 v2 = CheckPosition(ref CurrEnemyPositionList);
-            Instantiate(enemy, v2, Quaternion.identity, m_EnemyPool.transform);
+            enemy.InstantiateAsync(v2, Quaternion.identity, m_EnemyPool.transform);
         }
     }
 

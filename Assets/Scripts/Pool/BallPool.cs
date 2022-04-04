@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.AddressableAssets;
 
 public class BallPool : MonoBehaviour
 {
@@ -76,10 +77,9 @@ public class BallPool : MonoBehaviour
         return StockBallPool.Count;
     }
 
-    public static void InstantiateNewBall(GameObject go, GameObject parent)
+    public static void InstantiateNewBall(AssetReference go, GameObject parent)
     {
-        GameObject ball = Instantiate(go, parent.transform);
-        ball.SetActive(false);
+        go.InstantiateAsync(parent.transform).Completed += x => x.Result.SetActive(false);
     }
 
 }

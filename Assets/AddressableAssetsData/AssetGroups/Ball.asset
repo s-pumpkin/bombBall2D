@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Ball
+  m_EditorClassIdentifier: 
+  m_GroupName: Ball
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cbc32886239aab847b2ed8cf1f4649ec
+  m_SerializeEntries:
+  - m_GUID: 33d9ba2585f24e848b3b7adba76d43da
+    m_Address: Assets/Prefab/BallDeful.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d33dc42d1129ce446af77cf7f8f3b1fd, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d8c476ece40e61249ac8ebbcc5953af1, type: 2}
+    - {fileID: 11400000, guid: 81626467da213b347a77dd515e0c5efe, type: 2}

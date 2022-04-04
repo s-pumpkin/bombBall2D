@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93ac689d64b5504bab6c52def001b66, type: 3}
   m_Name: EnemyDefulData
   m_EditorClassIdentifier: 
+  m_Object:
+    m_AssetGUID: ad7678d09752ec44c99800c9c01813ce
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   MyCamp: 1
   attackMode: 0
   HpMax: 500

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8269771287718877550}
   - component: {fileID: -2247223466023708471}
   m_Layer: 6
-  m_Name: Player
+  m_Name: BallDeful
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
