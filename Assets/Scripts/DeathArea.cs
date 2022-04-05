@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +37,7 @@ public class DeathArea : MonoBehaviour, IRemake
         if (!FristCol)
         {
             FristCol = true;
-            PlayerShootContral.Instance.OnChangePosition(col.gameObject.transform.position);
+            PlayerShootContral.Instance.OnRegisterShootEndAction(() => PlayerShootContral.Instance.transform.DOMoveX(col.transform.position.x, 0.5f));
         }
 
         BallPool.Recovery(ballCtr);

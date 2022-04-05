@@ -46,8 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameData: {fileID: 11400000, guid: b8b8f422a8d1a5e48952898b66fc143c, type: 2}
   NowState: 0
-  DefulBall: {fileID: 8269771287718877545, guid: 33d9ba2585f24e848b3b7adba76d43da, type: 3}
-  DefulEnemy: {fileID: 4346159026484782088, guid: ad7678d09752ec44c99800c9c01813ce, type: 3}
+  DefulBall:
+    m_AssetGUID: 33d9ba2585f24e848b3b7adba76d43da
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  DefulEnemy:
+    m_AssetGUID: ad7678d09752ec44c99800c9c01813ce
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   m_BallPool: {fileID: 0}
   m_EnemyPool: {fileID: 0}
   ComboText: {fileID: 0}

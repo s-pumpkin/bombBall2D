@@ -1984,7 +1984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1449433912629423455, guid: 93b5c5083c41d9341aa48dc5697ec985, type: 3}
       propertyPath: m_Name
-      value: BallPool
+      value: BallManager
       objectReference: {fileID: 0}
     - target: {fileID: 4687042404112881591, guid: 93b5c5083c41d9341aa48dc5697ec985, type: 3}
       propertyPath: m_RootOrder
@@ -2099,13 +2099,5 @@ PrefabInstance:
       propertyPath: m_EnemyPool
       value: 
       objectReference: {fileID: 969849247}
-    - target: {fileID: 5293210433148940055, guid: eab70ef53c97b734786543eccfc02090, type: 3}
-      propertyPath: DefulBall.m_AssetGUID
-      value: 33d9ba2585f24e848b3b7adba76d43da
-      objectReference: {fileID: 0}
-    - target: {fileID: 5293210433148940055, guid: eab70ef53c97b734786543eccfc02090, type: 3}
-      propertyPath: DefulEnemy.m_AssetGUID
-      value: ad7678d09752ec44c99800c9c01813ce
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab70ef53c97b734786543eccfc02090, type: 3}

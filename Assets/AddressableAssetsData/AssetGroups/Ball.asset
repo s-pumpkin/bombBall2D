@@ -20,7 +20,8 @@ MonoBehaviour:
   - m_GUID: 33d9ba2585f24e848b3b7adba76d43da
     m_Address: Assets/Prefab/BallDeful.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Ball
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d33dc42d1129ce446af77cf7f8f3b1fd, type: 2}
   m_SchemaSet:

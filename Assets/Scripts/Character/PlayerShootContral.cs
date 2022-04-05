@@ -30,6 +30,8 @@ public class PlayerShootContral : CharacterBase, IRemake
     public Vector3 mouseDir;
 
     public LayerMask LineLayerMask;
+
+    public System.Action OnShootEndAction;
     public override void Awake()
     {
         instance = this;
@@ -116,12 +118,16 @@ public class PlayerShootContral : CharacterBase, IRemake
             yield return new WaitForSeconds(.1f);
         }
         yield return null;
+
+        OnShootEndAction?.Invoke();
     }
 
-    public void OnChangePosition(Vector3 pos)
+    public void OnRegisterShootEndAction(System.Action e)
     {
-        transform.DOMoveX(pos.x, 0.5f);
+        OnShootEndAction += e;
     }
+
+
 
     public override void OnHurt(int damage)
     {

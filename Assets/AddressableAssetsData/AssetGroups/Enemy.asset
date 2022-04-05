@@ -20,7 +20,8 @@ MonoBehaviour:
   - m_GUID: ad7678d09752ec44c99800c9c01813ce
     m_Address: Assets/Prefab/EnemyDeful.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Enemy
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d33dc42d1129ce446af77cf7f8f3b1fd, type: 2}
   m_SchemaSet:

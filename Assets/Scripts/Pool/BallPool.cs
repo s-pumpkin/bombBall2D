@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.AddressableAssets;
 
-public class BallPool : MonoBehaviour
+public class BallPool
 {
     public static Dictionary<GameObject, BallContral> BallContralGameObjectDictionary = new Dictionary<GameObject, BallContral>();
 
@@ -76,10 +76,4 @@ public class BallPool : MonoBehaviour
     {
         return StockBallPool.Count;
     }
-
-    public static void InstantiateNewBall(AssetReference go, GameObject parent)
-    {
-        go.InstantiateAsync(parent.transform).Completed += x => x.Result.SetActive(false);
-    }
-
 }

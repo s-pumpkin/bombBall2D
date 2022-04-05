@@ -107,9 +107,11 @@ public class GameManager : MonoBehaviour
     {
         ScreenManager.Instance.SetFadeIn();
 
+        yield return null;
+
         for (int i = 0; i < GameData.BallInitCount; i++)
         {
-            BallPool.InstantiateNewBall(DefulBall, m_BallPool);
+            BallObjectManager.InstantiateBallGameObject(DefulBall.editorAsset.name, m_BallPool);
         }
 
         yield return new WaitForSeconds(2f);
@@ -171,7 +173,6 @@ public class GameManager : MonoBehaviour
         {
             CurrEnemyPositionList.Add(ec.transform.position);
         }
-
 
         int summonAmount = Random.Range(0, 5);
         for (int i = 0; i <= summonAmount; i++)
