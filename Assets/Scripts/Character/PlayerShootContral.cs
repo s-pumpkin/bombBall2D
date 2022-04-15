@@ -31,6 +31,7 @@ public class PlayerShootContral : CharacterBase, IRemake
 
     public LayerMask LineLayerMask;
 
+    public bool isShootEnd = false;
     public System.Action OnShootEndAction;
     public override void Awake()
     {
@@ -53,7 +54,12 @@ public class PlayerShootContral : CharacterBase, IRemake
 
     public override void Update()
     {
-        if (GameManager.Instance.State != BattleState.PLAYERTURN || UseBool)
+        if (GameManager.Instance.State != BattleState.PLAYERTURN)
+            return;
+
+        ShootEndEvent();
+
+        if (UseBool)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -119,15 +125,22 @@ public class PlayerShootContral : CharacterBase, IRemake
         }
         yield return null;
 
-        OnShootEndAction?.Invoke();
+        ShootEndEvent();
     }
 
     public void OnRegisterShootEndAction(System.Action e)
     {
-        OnShootEndAction += e;
+        OnShootEndAction = e;
     }
 
-
+    public void ShootEndEvent()
+    {
+        if (!isShootEnd && OnShootEndAction != null)
+        {
+            OnShootEndAction.Invoke();
+            isShootEnd = true;
+        }
+    }
 
     public override void OnHurt(int damage)
     {
@@ -141,5 +154,7 @@ public class PlayerShootContral : CharacterBase, IRemake
     {
         UseBool = false;
         ShowBallCountText.RefText(GameManager.Instance.BallCount);
+        OnShootEndAction = null;
+        isShootEnd = false;
     }
 }

@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: cbc32886239aab847b2ed8cf1f4649ec
   m_SerializeEntries:
   - m_GUID: 33d9ba2585f24e848b3b7adba76d43da
-    m_Address: Assets/Prefab/BallDeful.prefab
+    m_Address: BallDeful
     m_ReadOnly: 0
     m_SerializedLabels:
     - Ball

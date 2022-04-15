@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b81e25176e14d4ebb66d19a959e7f3, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  BallInitCount: 5
+  BallInitCount: 10
   BallSpeed: 15

@@ -11,7 +11,6 @@ public class BallContral : MonoBehaviour
     public Rigidbody2D rig2D;
     public Vector2 lastVelocity;
     public float Speed;
-
     private void Awake()
     {
         rig2D = GetComponent<Rigidbody2D>();
@@ -41,7 +40,6 @@ public class BallContral : MonoBehaviour
             lastVelocity = rig2D.velocity;
         else
             rig2D.velocity = -lastVelocity;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
